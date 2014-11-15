@@ -23,7 +23,7 @@ and open the template in the editor.
  <!-- Los tabas de navegacion, deber coincidir los href con oos id's respectivos de navegacion -->
 <ul class="nav nav-tabs" role="tablist">
   <li class="active"><a href="#inicio" role="tab" data-toggle="tab">Inicio</a></li>
-  <li><a href="#trabajadores" role="tab" data-toggle="tab">Trabajadores</a></li>
+  <li><a href="#trabajadores" role="tab" data-toggle="tab" class="glyphicon glyphicon-inbox">Trabajadores</a></li>
   <li><a href="#nominas" role="tab" data-toggle="tab">Nominas</a></li>
   <li><a href="#reportes" role="tab" data-toggle="tab">Reportes</a></li>
 </ul>
@@ -36,25 +36,49 @@ and open the template in the editor.
             <div class="panel">
                 <div class="panel-title">Inicio</div>
                 <div class="panel-body">
-                    <input class="form-control" id="tu-nombre"/>
-                    <span class="input-group-btn">
-                    <span class="btn btn-success" id="botoncito">gatonejo</span>
-                    </span>
+                   Aqui ira inicio
                 </div>
             </div>
         </div>
     </div>
-  <div class="tab-pane" id="trabajadores">Trabajadores</div>
+  <div class="tab-pane" id="trabajadores">
+      <div class="panel">
+          <h3 class="panel-heading">Guardar trabajador</h3>
+          <label>
+              Nombre
+          </label>
+          <input type="text" class="form-control" id="nombre">
+          <label>A.Paterno</label>
+          <input type="text" class="form-control" id="paterno">
+          <label>A. materno</label>
+          <input type="text" class="form-control" id="materno">
+          <a class="btn btn-success" id="guardar-trabajador">Guardar Trabajador</a>
+      </div>
+  </div>
   <div class="tab-pane" id="nominas">Nominas</div>
   <div class="tab-pane" id="reportes">Reportes</div>
 </div>
 <script>
     $(document).ready(function(){
-        $("#botoncito").click(function(){
-            alert("hola "+$("#tu-nombre").val());
+        $("#guardar-trabajador").click(function(){
+           $.ajax({
+               url:'guardar-trabajador',
+               method:'post',
+               data:{
+                   nombre:$("#nombre").val(),
+                   paterno:$("#paterno").val(),
+                   materno:$("#materno").val()
+               },
+               success:function(res){
+                   alert(res);
+               }
+           });
         });
     });
 </script>
+
+
+
     </body>
 </html>
 

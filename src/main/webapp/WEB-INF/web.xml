@@ -13,6 +13,10 @@
         <servlet-name>ServletBorrarNomina</servlet-name>
         <servlet-class>com.jc.elementos.controller.ServletBorrarNomina</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ServletGuardarTrabajador</servlet-name>
+        <servlet-class>com.jc.elementos.controller.ServletGuardarTrabajador</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ServletHoroscopo</servlet-name>
         <url-pattern>/horoscopo</url-pattern>
@@ -24,6 +28,10 @@
     <servlet-mapping>
         <servlet-name>ServletBorrarNomina</servlet-name>
         <url-pattern>/borrar-nomina</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletGuardarTrabajador</servlet-name>
+        <url-pattern>/guardar-trabajador</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

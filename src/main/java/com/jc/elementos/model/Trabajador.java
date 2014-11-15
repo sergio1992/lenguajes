@@ -46,6 +46,11 @@ public class Trabajador implements Serializable {
     public Trabajador() {
     }
 
+    public Trabajador(Integer idTrabajador, String materno) {
+        this.idTrabajador = idTrabajador;
+        this.materno = materno;
+    }
+
     public Trabajador(Integer idTrabajador) {
         this.idTrabajador = idTrabajador;
     }

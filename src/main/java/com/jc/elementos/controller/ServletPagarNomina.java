@@ -5,7 +5,7 @@
  */
 package com.jc.elementos.controller;
 
-import com.jc.elementos.model.NewHibernateUtil;
+import com.jc.elementos.model.HIbernateUtilidades;
 import com.jc.elementos.model.Nomina;
 import com.jc.elementos.model.Trabajador;
 import java.io.IOException;
@@ -30,7 +30,7 @@ public class ServletPagarNomina extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-    SessionFactory factory=    NewHibernateUtil.getSessionFactory();
+    SessionFactory factory=    HIbernateUtilidades.getSessionFactory();
   Session sesion=  factory.openSession();
   Transaction t=sesion.beginTransaction();
   
