@@ -3,6 +3,8 @@
   <persistence-unit name="com.jc.elementos_elementos-yo-alumno_war_1PU" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>com.jc.elementos.model.Trabajador</class>
+    <class>com.jc.elementos.model.Usuario</class>
+    <class>com.jc.elementos.model.Direccion</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/mysql?zeroDateTimeBehavior=convertToNull"/>

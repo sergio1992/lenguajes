@@ -43,8 +43,12 @@
         <artifactId>spring-webmvc</artifactId>
         <version>4.1.1.RELEASE</version>
     </dependency>
-
-
+    <dependency>
+      <groupId>javax.annotation</groupId>
+      <artifactId>jsr250-api</artifactId>
+      <version>1.0</version>
+      <scope>provided</scope>
+    </dependency>
   </dependencies>
 
   <build>
